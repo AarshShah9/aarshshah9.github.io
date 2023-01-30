@@ -1,0 +1,239 @@
+/* Entire Website Stuff*/
+
+* {
+  font-family: Helvetica, Sans-Serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+:root {
+  --bordergrey: rgb(214, 222, 230);
+  --grey: rgb(120, 129, 139);
+  --purple: rgb(109, 45, 183);
+}
+
+a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -5px;
+  padding-top: 20px;
+}
+ul.dashed > li:before {
+  content: "- ";
+  text-indent: -5px;
+  padding-top: 15px;
+}
+
+/* Nav Bar Stuff */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+header {
+  border-top: 2px solid var(--purple);
+  border-bottom: 1px solid var(--bordergrey);
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.nav-item {
+  display: inline-block;
+  padding-left: 40px;
+}
+
+.nav-item a {
+  color: var(--grey);
+  font-size: 1.1em;
+}
+
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.active a {
+  color: var(--purple);
+}
+
+/* Left Side profile picture stuff */
+
+img {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.frame {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.figcaption {
+  text-align: center;
+}
+
+.figuresection {
+  display: flex;
+  justify-content: right;
+  flex: 3;
+}
+
+figcaption h3 {
+  font-weight: 500;
+  margin: 0;
+  padding-top: 15px;
+  font-size: 25px;
+  color: var(--grey);
+}
+
+figcaption h4 {
+  font-weight: 500;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin: 0;
+  font-size: 15px;
+  color: var(--grey);
+}
+
+figcaption a {
+  font-size: 12px;
+}
+
+/* Right Hand Stuff */
+
+h1 {
+  padding-bottom: 25px;
+  font-size: 30px;
+  font-weight: 100;
+  color: var(--grey);
+}
+
+.infosection {
+  padding: 40px;
+  flex: 4;
+}
+
+.greytext {
+  color: var(--grey);
+  padding-top: 110px;
+}
+
+td {
+  padding-top: 5px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills progress {
+  width: 75%;
+  height: 25px;
+}
+
+.align {
+  text-align: end;
+}
+
+.table {
+  width: 90%;
+}
+
+.thclass {
+  text-align: left;
+  font-size: 20px;
+}
+
+.p_padding {
+  padding-top: 30px;
+}
+
+/* Footer Stuff */
+
+footer {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  border-top: 1px solid var(--bordergrey);
+}
+
+footer p {
+  font-weight: 100;
+  font-size: 12px;
+}
+
+/* Media Queries/ Responsive */
+
+/* you can also use "min-width" or a combination of both: */
+/* @media only screen and (max-width: 800px) and (min-width: 400px)  */
+@media only screen and (max-width: 800px) {
+  /* padding only if screen is 800px or smaller */
+  /* this has a higher precedence and wins the default padding when */
+  /* the condition is met */
+
+  .frame {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .figuresection {
+    border-bottom: 1px solid var(--bordergrey);
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .skills {
+    display: flex;
+    justify-content: center;
+  }
+
+  .skills progress {
+    width: 100%;
+  }
+
+  .educationtable {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .figuresection {
+    border-right: 1px solid var(--bordergrey);
+    padding-top: 25px;
+  }
+}
